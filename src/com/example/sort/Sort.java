@@ -1,7 +1,4 @@
 package com.example.sort;
-
-import java.net.Inet4Address;
-
 public class Sort {
 	public void BubbleSort(int[] score){
 		//冒泡排序法，就是依次比较一个数组中的相邻的两个值
@@ -49,7 +46,13 @@ public class Sort {
 			score[index+1]=insertval;
 		}	
 	}
-	
+	public int trangle(int n){
+		//递归算法
+		if(n==1)
+			return 1;
+		else 
+			return (n+trangle(n-1));
+	}
 	
 	
 	
