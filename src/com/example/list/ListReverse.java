@@ -14,6 +14,7 @@ public class ListReverse {
     * 最后再将当前节点指向最初记录的后一个节点，
     * 如此反复，直到当前节点的后一个节点为NULL时，则代表当前节点时反转后的头结点了
     *
+    * 9 -> 1 -> 3 -> 5 -> 7 -> 0 -> 4
     */
 
     public Node reverseList(Node head) {
