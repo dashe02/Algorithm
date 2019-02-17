@@ -2,6 +2,7 @@ package com.example.sort;
 
 /**
  * Created by wecash on 19/2/17.
+ * https://www.cnblogs.com/yueshutong/p/9381535.html
  */
 public class QuickSort1 {
 
