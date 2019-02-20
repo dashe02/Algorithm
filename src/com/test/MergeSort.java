@@ -1,4 +1,4 @@
-package com.example.sort;
+package com.test;
 
 import java.util.Arrays;
 
@@ -7,15 +7,22 @@ import java.util.Arrays;
  */
 public class MergeSort {
 
-    public void mergeSort(int[] array, int left, int right) {
-        if (left == right) return;
-        int mid = (right - left) / 2 + left;
-        mergeSort(array, left, mid);
-        mergeSort(array, mid + 1, right);
-        mergeArr(array, left, mid, right);
+    public static void main(String[] args) {
+        int[] a = new int[]{9, 3, 6, 8, 2, 5, 4, 0};
+        MergeSort m = new MergeSort();
+        m.mergeSort(a, 0, a.length - 1);
+        System.out.println(Arrays.toString(a));
     }
 
-    private void mergeArr(int[] array, int left, int mid, int right) {
+    public void mergeSort(int[] array, int left, int right) {
+        if (left >= right) return;
+        int mid = left + (right - left) / 2;
+        mergeSort(array, left, mid);
+        mergeSort(array, mid + 1, right);
+        mergeArray(array, left, mid, right);
+    }
+
+    private void mergeArray(int[] array, int left, int mid, int right) {
         int[] temp = new int[right - left + 1];
         int i = left;
         int j = mid + 1;
@@ -36,12 +43,5 @@ public class MergeSort {
         for (int k1 = 0; k1 < temp.length; k1++) {
             array[k1 + left] = temp[k1];
         }
-    }
-
-    public static void main(String[] args) {
-        int[] array = new int[]{6, 1, 8, 0, 4, 7, 2};
-        MergeSort m = new MergeSort();
-        m.mergeSort(array, 0, array.length - 1);
-        System.out.println(Arrays.toString(array));
     }
 }
