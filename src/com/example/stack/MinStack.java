@@ -30,7 +30,7 @@ public class MinStack {
     }
 
     public int top() {
-        return array[size];
+        return array[--size];
     }
 
     public int getMin() {
@@ -55,5 +55,12 @@ public class MinStack {
         minStack.pop();
         System.out.println(minStack.top());
         System.out.println(minStack.getMin());
+        /*minStack.push(-2);
+        minStack.push(0);
+        minStack.push(-3);
+        System.out.println(minStack.getMin());
+        minStack.pop();
+        System.out.println(minStack.top());
+        System.out.println(minStack.getMin());*/
     }
 }
