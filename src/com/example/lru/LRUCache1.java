@@ -45,25 +45,38 @@ public class LRUCache1<K, V> {
 
     /*2->3->1->5->6*/
     private void moveToFirst(Node node) {
+        // node节点有可能是头节点，尾节点，中间节点三种情况，来处理指针删除
+        // 情况1,node是头节点
         if (node == first) return;
+        // 情况2,node的前一个节点的next引用指向node的后一个节点
         if (node.pre != null) node.pre.next = node.next;
+        // node的后一个节点的pre引用指向node的前一个节点
         if (node.next != null) node.next.pre = node.pre;
+        // 情况3,node为尾节点
         if (node == last) last = last.pre;
-        if (first == null || last == null) {
-            first = last = node;
-            return;
+        // 位移到头节点
+        // 第一次put时（即first==null）不需要处理Node的pre和next两个引用
+        if (first == null) {
+            node.next = first;
+            first.pre = node;
         }
-        node.next = first;
-        first.pre = node;
         first = node;
         node.pre = null;
+        //处理第一次put时，last也指向first
+        if (last == null) last = first;
     }
 
     private void removeLast() {
         if (last != null) {
-            last = last.pre;
-            if (last == null) first = null;
-            else last.next = null;
+            Node temp = last.pre;
+            // 尾节点的前一个节点next引用移除
+            if (last.pre != null) {
+                last.pre.next = null;
+            }
+            // 尾节点移除pre引用
+            last.pre = null;
+            // 尾指针指向前一个节点
+            last = temp;
         }
     }
 
