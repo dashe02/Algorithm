@@ -1,11 +1,14 @@
+/*
 package com.example.lru;
 
 import java.util.HashMap;
 import java.util.Map;
 
+*/
 /**
  * Created by wecash on 19/2/24.
- */
+ *//*
+
 public class LRUCache1<K, V> {
 
     private Node first;
@@ -43,7 +46,9 @@ public class LRUCache1<K, V> {
         return node.value;
     }
 
-    /*2->3->1->5->6*/
+    */
+/*2->3->1->5->6*//*
+
     private void moveToFirst(Node node) {
         // node节点有可能是头节点，尾节点，中间节点三种情况，来处理指针删除
         // 情况1,node是头节点
@@ -84,3 +89,4 @@ public class LRUCache1<K, V> {
         return hashMap.get(key);
     }
 }
+*/
