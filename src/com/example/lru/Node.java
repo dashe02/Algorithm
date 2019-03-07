@@ -5,13 +5,13 @@ package com.example.lru;
  */
 public class Node {
 
-    int key;
+    public int key;
 
-    int value;
+    public int value;
 
-    Node pre;
+    public Node pre;
 
-    Node next;
+    public Node next;
 
     public Node(int key, int value) {
         this.key = key;
