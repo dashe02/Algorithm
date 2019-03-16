@@ -33,7 +33,7 @@ public class SumOfAll {
                     int n = stack.pop();
                     tempVal = tempVal - array[n];
                     m = n + 1;
-                    //for (; array[m] == array[n]; m++) ;
+                    for (; array[m] == array[n]; m++) ;
                 } else {
                     break;
                 }

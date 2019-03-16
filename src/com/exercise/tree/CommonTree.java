@@ -2,6 +2,11 @@ package com.exercise.tree;
 
 /**
  * Created by wecash on 19/3/12.
+ *                1
+ *               / \
+ *              2  3
+ *             /\  /\
+ *            4 5 6 7
  */
 public class CommonTree {
 
