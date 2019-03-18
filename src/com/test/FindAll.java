@@ -9,7 +9,8 @@ import java.util.Stack;
 public class FindAll {
 
     public static void main(String[] args) {
-        int[] array = new int[]{1, 2, 3, 5, 7, 9};
+        //int[] array = new int[]{1, 2, 3, 5, 7, 9};
+        int[] array = new int[]{1, 2, 3, 4, 5, 6};
         int target = 10;
         FindAll f = new FindAll();
         Arrays.sort(array);
