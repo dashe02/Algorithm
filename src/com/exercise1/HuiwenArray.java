@@ -11,7 +11,7 @@ public class HuiwenArray {
 
     public static void main(String[] args) {
 
-        int[] array = {1, 2, 1, 3, 2};
+        int[] array = {1, 2, 1, 3, 2, 1, 4, 5};
         //int[] array = {51, 23, 52, 97, 97, 76, 23, 51};
         HuiwenArray h = new HuiwenArray();
         int[] preArray = h.preHandle(array);
