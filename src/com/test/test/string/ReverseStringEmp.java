@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 public class ReverseStringEmp {
 
     public static void main(String[] args) {
-        //String str = "AB#$C%D";
+        //String str = "AB#$CompareTwoVersion%D";
         String str="abcd";
         ReverseStringEmp r = new ReverseStringEmp();
         //System.out.print(r.reverseStringEmp(str));
