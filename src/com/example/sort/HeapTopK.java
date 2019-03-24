@@ -9,7 +9,7 @@ public class HeapTopK {
         int[] array = {5, 1, 2, 0, 4, 8, 9, 7};
         int k = 3;
         HeapTopK h = new HeapTopK();
-        //h.heapSort(array);
+        //h.HeapSort(array);
         h.topK(array, k);
         //System.out.println(Arrays.toString(array));
     }

@@ -5,9 +5,9 @@ package com.exercise.list;
  */
 public class Node {
 
-    int val;
+    public int val;
 
-    Node next;
+    public Node next;
 
     public Node(int val) {
         this.val = val;
