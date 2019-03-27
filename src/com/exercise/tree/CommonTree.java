@@ -18,16 +18,16 @@ public class CommonTree {
         TreeNode lr = new TreeNode(5);
         TreeNode rl = new TreeNode(6);
         TreeNode rr = new TreeNode(7);
-        TreeNode lll = new TreeNode(8);
-        TreeNode llr = new TreeNode(9);
+        //TreeNode lll = new TreeNode(8);
+        //TreeNode llr = new TreeNode(9);
         root.left = l;
         root.right = r;
         l.left = ll;
         l.right = lr;
         r.left = rl;
         r.right = rr;
-        ll.left=lll;
-        ll.right=llr;
+        //ll.left=lll;
+        //ll.right=llr;
         return root;
     }
 }
