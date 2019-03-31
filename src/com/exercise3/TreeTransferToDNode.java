@@ -22,11 +22,14 @@ public class TreeTransferToDNode {
     }
 
     private TreeNode transfer(TreeNode root) {
-        visit(root);
+        if (root==null) return null;
+        transfer(root.left);
+        createList(root);
+        transfer(root.right);
         return head;
     }
 
-    private void visit(TreeNode cur) {
+    private void createList(TreeNode cur) {
         cur.left = tail;
         if (tail != null) {
             tail.right = cur;
