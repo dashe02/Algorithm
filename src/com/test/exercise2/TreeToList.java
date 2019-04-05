@@ -1,12 +1,13 @@
-package com.exercise3;
+package com.test.exercise2;
 
 import com.exercise.tree.CommonTree;
 import com.exercise.tree.TreeNode;
 
 /**
- * Created by wecash on 19/3/31.
+ * Created by wecash on 19/4/1.
  */
 public class TreeToList {
+
     public static void main(String[] args) {
         TreeNode root = CommonTree.createTree();
         TreeToList t = new TreeToList();
@@ -24,7 +25,10 @@ public class TreeToList {
         TreeNode temp = root.right;
         root.right = root.left;
         root.left = null;
-        while (root.right != null) root = root.right;
+        while (root.right != null) {
+            root = root.right;
+        }
         root.right = temp;
     }
+
 }
