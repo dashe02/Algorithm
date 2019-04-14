@@ -1,5 +1,6 @@
 package com.exercise4;
 
+import java.util.Comparator;
 import java.util.PriorityQueue;
 
 /**
@@ -8,7 +9,12 @@ import java.util.PriorityQueue;
 public class FindMedium {
 
     PriorityQueue<Integer> maxHeap = new PriorityQueue<>();
-    PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+    PriorityQueue<Integer> minHeap = new PriorityQueue<>(11, new Comparator<Integer>() {
+        @Override
+        public int compare(Integer o1, Integer o2) {
+            return o2 - o1;
+        }
+    });
 
     int count = 0;
 
